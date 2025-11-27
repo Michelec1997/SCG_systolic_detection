@@ -35,12 +35,6 @@ def run_exp(dataset_train, dataset_test, window_size, n_channels, pers, ft):
 
     ECG_subjects_server, SCG_subjects_server, gt_boxes_AO_subj_server, ao_mask_peaks_server = ld.load_dataset(dataset_train, n_channels)
 
-   
-    ECG_subjects_server=ECG_subjects_server[:2]
-    SCG_subjects_server=SCG_subjects_server[:2]
-    gt_boxes_AO_subj_server=gt_boxes_AO_subj_server[:2]
-    ao_mask_peaks_server=ao_mask_peaks_server[:2]
-
     print(np.array(SCG_subjects_server).shape, np.array(gt_boxes_AO_subj_server).shape, np.array(ao_mask_peaks_server).shape, np.array(ECG_subjects_server).shape)
 
     print("Number of subjects in training dataset: ", len(SCG_subjects_server))
